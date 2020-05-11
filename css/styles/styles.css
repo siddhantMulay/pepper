@@ -1,3 +1,8 @@
+.centerAlign {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 html {
   max-width: 1920px;
   margin: 0 auto;
@@ -9,9 +14,44 @@ html body {
 }
 header {
   height: 80px;
+  max-width: 1600px;
+  margin: 0 auto;
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  right: 2rem;
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: 70px auto;
   justify-content: space-between;
+}
+header .sideHam {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  display: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .sideHam span {
+  position: relative;
+  width: 50%;
+  background: #000;
+  height: 2px;
+}
+header .sideHam span::before,
+header .sideHam span::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #000;
+}
+header .sideHam span::before {
+  top: -8px;
+}
+header .sideHam span::after {
+  bottom: -8px;
 }
 header a {
   height: inherit;
@@ -25,10 +65,42 @@ header nav a {
   margin: 0 1.5rem;
   color: indigo;
   text-decoration: none;
+  font-size: 18px;
 }
 header nav a:first-child {
   margin-left: 0px;
 }
 header nav a:last-child {
   margin-right: 0px;
+}
+#sidebar {
+  background: #fff;
+  position: fixed;
+  width: 360px;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 4rem;
+  display: none;
+}
+#sidebar nav a {
+  display: block;
+  margin: 3rem 0;
+  text-decoration: none;
+  font-size: 18px;
+  color: indigo;
+}
+@media screen and (max-width: 870px) {
+  header {
+    grid-template-columns: 50px auto;
+    align-items: center;
+    height: 70px;
+  }
+  header .sideHam {
+    display: flex !important;
+  }
+  header nav {
+    display: none;
+  }
 }
