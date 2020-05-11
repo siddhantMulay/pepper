@@ -1,0 +1,48 @@
+@import '../common/variables.less';
+
+html {
+    max-width: @bodyMaxWid;
+    margin   : 0 auto;
+
+    body {
+        max-width: @contentMaxWid;
+        margin   : 0 auto;
+        padding  : 2rem;
+    }
+}
+
+//HEADER
+header {
+    height               : @headerHeight;
+    display              : grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content      : space-between;
+
+    a {
+        height : inherit;
+        outline: none;
+    }
+
+    .logo {
+        img {
+            width : 100%;
+            height: 100%;
+        }
+    }
+
+    nav {
+        a {
+            margin         : 0 1.5rem;
+            color          : indigo;
+            text-decoration: none;
+
+            &:first-child {
+                margin-left: 0px;
+            }
+
+            &:last-child {
+                margin-right: 0px;
+            }
+        }
+    }
+}

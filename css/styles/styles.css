@@ -1,0 +1,34 @@
+html {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+html body {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+header {
+  height: 80px;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: space-between;
+}
+header a {
+  height: inherit;
+  outline: none;
+}
+header .logo img {
+  width: 100%;
+  height: 100%;
+}
+header nav a {
+  margin: 0 1.5rem;
+  color: indigo;
+  text-decoration: none;
+}
+header nav a:first-child {
+  margin-left: 0px;
+}
+header nav a:last-child {
+  margin-right: 0px;
+}
