@@ -34,8 +34,10 @@ body * {
 button {
   border: 1px solid transparent;
   border-radius: 4px;
-  padding: 8px 12px;
+  padding: 8px 20px;
   font-size: 15px;
+  cursor: pointer;
+  min-width: 130px;
 }
 button.default {
   background: #fff;
@@ -51,4 +53,15 @@ button.primary {
   background: linear-gradient(97deg, #f47954, #f6436f);
   color: #fff;
   box-shadow: 0 12px 16px 0 rgba(191, 0, 0, 0.16);
+  padding: 8px 16px;
+}
+.pageContent {
+  margin-top: 100px;
+}
+.actionButtons {
+  display: flex;
+  margin-top: 2.5rem;
+}
+.actionButtons button:last-child {
+  margin-left: 15px;
 }

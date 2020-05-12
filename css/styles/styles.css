@@ -26,6 +26,7 @@ header {
 }
 header #sideHam {
   height: 40px;
+  min-width: auto;
   width: 40px;
   cursor: pointer;
   background: transparent;
@@ -121,6 +122,41 @@ header nav a:last-child {
   text-decoration: none;
   font-size: 18px;
   color: #fff;
+}
+.subText {
+  background-image: linear-gradient(97deg, #f47954, #f6436f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+section {
+  min-height: 50vh;
+  display: grid;
+  align-items: center;
+}
+section .info {
+  max-width: 650px;
+}
+section .info .infoText {
+  font-size: 24px;
+  color: #8f9bb0;
+}
+section .info h5 {
+  font-size: 15px;
+  margin-bottom: 1em;
+}
+section .info h3 {
+  font-weight: initial;
+  margin: 5px 0;
+  font-size: 2.5rem;
+  color: #12224f;
+  line-height: 1.4;
+}
+section .info h3 .highlight {
+  color: #ff723d;
+  font-weight: 600;
 }
 @media screen and (max-width: 320px) {
   #sidebar {
