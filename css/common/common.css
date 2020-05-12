@@ -28,15 +28,14 @@ html *,
 body * {
   font-family: 'Source Sans Pro', sans-serif;
   box-sizing: border-box;
-  transition: all 0.2s ease;
-  -webkit-transition: all 0.2s ease;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
 }
 button {
   border: 1px solid transparent;
   border-radius: 4px;
   padding: 8px 12px;
   font-size: 15px;
-  box-shadow: 0 12px 16px 0 rgba(191, 0, 0, 0.16);
 }
 button.default {
   background: #fff;
@@ -46,8 +45,10 @@ button.default {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  box-shadow: 0 12px 16px 0 rgba(191, 0, 0, 0.16);
 }
 button.primary {
   background: linear-gradient(97deg, #f47954, #f6436f);
   color: #fff;
+  box-shadow: 0 12px 16px 0 rgba(191, 0, 0, 0.16);
 }
