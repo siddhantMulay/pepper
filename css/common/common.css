@@ -3,6 +3,11 @@
   align-items: center;
   justify-content: center;
 }
+.headerActive {
+  -webkit-box-shadow: 0px 3px 5px 0px #c2c2c2;
+  -moz-box-shadow: 0px 3px 5px 0px #c2c2c2;
+  box-shadow: 0px 3px 5px 0px #c2c2c2;
+}
 @font-face {
   font-family: 'Source Sans Pro';
   font-style: normal;
@@ -64,4 +69,7 @@ button.primary {
 }
 .actionButtons button:last-child {
   margin-left: 15px;
+}
+img {
+  max-width: 100%;
 }

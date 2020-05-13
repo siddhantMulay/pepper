@@ -25,4 +25,14 @@ $(document).ready(function() {
         $('#sideHam').attr('data-action', "open");
         $('#sidebar').attr('data-visible', "false");
     })
+
+    //Header opacity on scroll
+    $('body').on("scroll", function() {
+        if($('body').scrollTop() > 50) {
+            $("header").addClass("active");
+        } else {
+            //remove the background property so it comes transparent again (defined in your css)
+           $("header").removeClass("active");
+        }
+    });
 })
