@@ -12,9 +12,6 @@ html {
   max-width: 1920px;
   margin: 0 auto;
 }
-html body {
-  padding: 2rem;
-}
 .maxContent {
   max-width: 1600px;
   margin: 0 auto;
@@ -151,7 +148,8 @@ section {
   min-height: 50vh;
   display: grid;
   align-items: center;
-  margin: 8rem auto;
+  padding: 0 2rem;
+  margin: 8rem auto !important;
 }
 section.center {
   display: block;
@@ -190,6 +188,24 @@ section .clients img {
   width: 50%;
   max-width: 250px;
 }
+section.blueBg {
+  position: relative;
+}
+section.blueBg * {
+  color: #fff;
+}
+section.blueBg .overlay {
+  position: absolute;
+  top: 0;
+  left: 90px;
+}
+section.blueBg .overlay img {
+  width: 50%;
+}
+section.blueBg .overlay.hash {
+  width: 25%;
+  left: 90px;
+}
 @media screen and (max-width: 320px) {
   #sidebar {
     width: 200px;
@@ -206,5 +222,8 @@ section .clients img {
   }
   header nav {
     display: none;
+  }
+  section.blueBg {
+    background: url('../../assets/images/altSectionBg.svg') no-repeat;
   }
 }

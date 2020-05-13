@@ -3,10 +3,6 @@
 html {
     max-width: @bodyMaxWid;
     margin   : 0 auto;
-
-    body {
-        padding: 2rem;
-    }
 }
 
 .maxContent {
@@ -179,7 +175,8 @@ section {
     min-height : 50vh;
     display    : grid;
     align-items: center;
-    margin     : 8rem auto;
+    padding    : 0 2rem;
+    margin     : 8rem auto !important;
 
     &.center {
         display   : block;
@@ -225,6 +222,29 @@ section {
             max-width: 250px;
         }
     }
+
+    &.blueBg {
+        position: relative;
+
+        * {
+            color: #fff;
+        }
+
+        .overlay {
+            position: absolute;
+            top     : 0;
+            left    : 90px;
+
+            img {
+                width: 50%;
+            }
+
+            &.hash {
+                width: 25%;
+                left : 90px;
+            }
+        }
+    }
 }
 
 //MEDIA QUERIES
@@ -246,6 +266,12 @@ section {
 
         nav {
             display: none;
+        }
+    }
+
+    section {
+        &.blueBg {
+            background: url('../../assets/images/altSectionBg.svg') no-repeat;
         }
     }
 }
