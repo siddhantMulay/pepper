@@ -154,6 +154,23 @@ img {
   border: 1px solid transparent;
   outline: none;
 }
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #cecece;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 @media screen and (max-width: 1472px) {
   body {
     zoom: 0.82;
