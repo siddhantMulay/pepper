@@ -156,6 +156,32 @@ section {
   padding: 8rem 2rem 2rem 2rem;
   position: relative;
 }
+section.pinkBg {
+  min-height: 100%;
+}
+section.pinkBg .altOverlay {
+  position: absolute;
+  top: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+section.pinkBg .altOverlay .infoItems {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  transform: translateY(-12px);
+  padding: 0 5rem;
+}
+section.pinkBg .altOverlay .infoItems .item .head {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+section.pinkBg .altOverlay .infoItems .item .subHead {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
 section .social nav a {
   text-decoration: none;
 }
@@ -342,6 +368,12 @@ section .overlay p {
   section .bgImages .overlay p {
     font-size: 16px;
   }
+  section.pinkBg {
+    max-height: 400px !important;
+  }
+  section.pinkBg .bgImages img {
+    height: 400px !important;
+  }
 }
 @media screen and (max-width: 1186px) {
   header nav a {
@@ -445,5 +477,32 @@ section .overlay p {
   }
   section .bgImages .overlay p {
     font-size: 16px;
+  }
+}
+@media screen and (max-width: 1124px) {
+  section.pinkBg {
+    max-height: 350px;
+  }
+  section.pinkBg .bgImages img {
+    height: 350px;
+    object-fit: fill;
+  }
+  section.pinkBg .altOverlay {
+    align-items: center;
+  }
+  section.pinkBg .altOverlay .infoItems {
+    flex-wrap: wrap;
+  }
+  section.pinkBg .altOverlay .infoItems .item {
+    width: 210px;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 658px) {
+  section.pinkBg {
+    margin-bottom: 15rem;
+  }
+  section.pinkBg .pinkImg {
+    transform: translateY(45px) scale(2) !important;
   }
 }

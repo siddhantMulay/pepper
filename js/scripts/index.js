@@ -51,7 +51,7 @@ $(document).ready(function () {
     //Change Slider Background
     $('input[type="range"]').on("input", function () {
         var val = $(this).val();
-        $(this).css('background', 'linear-gradient(to right, #ffffff 0%, #ffffff ' + this.value + '%, rgba(255, 255, 255, 0.7) ' + this.value + '%, rgba(255, 255, 255, 0.7) 100%)')
+        $(this).css('background', 'linear-gradient(to right, #ffffff 0%, #ffffff ' + val + '%, rgba(255, 255, 255, 0.7) ' + val + '%, rgba(255, 255, 255, 0.7) 100%)')
     })
 
     $('input[type="range"]').trigger('input')
