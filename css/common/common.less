@@ -11,6 +11,10 @@ body {
     transition        : all 0.3s ease;
     -webkit-transition: all 0.3s ease;
 
+    img {
+        user-select: none;
+    }
+
     * {
         font-family       : 'Source Sans Pro', sans-serif;
         box-sizing        : border-box;
@@ -65,6 +69,12 @@ button {
                 }
             }
 
+            &.left {
+                &::after {
+                    left: -25px;
+                }
+            }
+
             &::after {
                 content        : '';
                 position       : absolute;
@@ -72,7 +82,6 @@ button {
                 background-size: cover;
                 width          : 75px;
                 height         : 75px;
-                left           : -25px;
                 z-index        : -1;
             }
         }

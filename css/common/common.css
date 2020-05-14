@@ -31,6 +31,10 @@ body {
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
 }
+html img,
+body img {
+  user-select: none;
+}
 html *,
 body * {
   font-family: 'Source Sans Pro', sans-serif;
@@ -78,6 +82,9 @@ button.primary.dots.right::after {
   left: initial;
   right: -25px;
 }
+button.primary.dots.left::after {
+  left: -25px;
+}
 button.primary.dots::after {
   content: '';
   position: absolute;
@@ -85,7 +92,6 @@ button.primary.dots::after {
   background-size: cover;
   width: 75px;
   height: 75px;
-  left: -25px;
   z-index: -1;
 }
 input[type="range"] {
