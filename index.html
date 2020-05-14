@@ -95,7 +95,7 @@
             <div class="form">
                 <div class="blueContainer">
                     <h5>Enter a few details to get started</h5>
-                    <div class="inputs">
+                    <div class="inputs" data-grid="2">
                         <div class="inputContainer">
                             <div class="label">Enter your full name:</div>
                             <input type="text" placeholder="Full Name" />
@@ -113,16 +113,36 @@
                             <input type="text" placeholder="Phone Number" />
                         </div>
                     </div>
+
+                    <div class="inputs" data-grid="1">
+                        <div class="inputContainer rangeInput">
+                            <div class="label">Your Budget:</div>
+                            <input type="range" step="1" min="0" max="100" value="23" />
+                            <div id="steplist">
+                                <span>0K</span>
+                                <span>10K</span>
+                                <span>25K</span>
+                                <span>50K</span>
+                                <span>80K+</span>
+                                </datalist>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inputs actionBtn" data-grid="1">
+                        <button class="primary dots">
+                            Get a Quote
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="blueSecBg">
+                    <img src="./assets/images/Section1Bg.svg" alt="">
+                </div>
+                <div class="circleOverlay">
+                    <img src="./assets/images/CircleSec2.svg" alt="">
                 </div>
             </div>
-
-            <div class="blueSecBg">
-                <img src="./assets/images/Section1Bg.svg" alt="">
-            </div>
-            <div class="circleOverlay">
-                <img src="./assets/images/CircleSec2.svg" alt="">
-            </div>
-
         </section>
 
         <!-- SECTION 2 -->
