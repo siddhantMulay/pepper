@@ -23,6 +23,7 @@ header {
         display        : flex;
         justify-content: space-between;
         height         : 100%;
+        padding        : 0 8px;
     }
 
     &.active {
@@ -226,22 +227,40 @@ section {
     &.blueBg {
         position: relative;
 
-        * {
-            color: #fff;
+        .bgImages {
+            background     : url(../../assets/images/altSectionBgOverlay.png) no-repeat;
+            background-size: 100% auto;
+            position       : relative;
+            max-width      : 1230px;
+            margin         : 0 auto;
+
+            * {
+                color: #fff;
+            }
+
+            img {
+                position: relative;
+                z-index : -1;
+            }
         }
 
         .overlay {
-            position: absolute;
-            top     : 0;
-            left    : 90px;
+            position : absolute;
+            top      : calc(100% - 440px);
+            left     : 0;
+            right    : 0;
+            max-width: 60%;
+            margin   : 0 auto;
 
-            img {
-                width: 50%;
+            .subText {
+                background-image       : none;
+                -webkit-text-fill-color: #fff;
+                font-weight            : initial;
             }
 
-            &.hash {
-                width: 25%;
-                left : 90px;
+            p {
+                line-height: 1.4;
+                font-size  : 19px;
             }
         }
     }
@@ -260,6 +279,10 @@ section {
         align-items: center;
         z-index    : 1;
 
+        .inner {
+            padding: 0px;
+        }
+
         #sideHam {
             display: flex !important;
         }
@@ -271,7 +294,66 @@ section {
 
     section {
         &.blueBg {
-            background: url('../../assets/images/altSectionBg.svg') no-repeat;
+            .bgImages {
+                .bgImg {
+                    transform: scale(1.7) !important;
+                }
+
+                .overlay {
+                    top      : calc(100% - 325px) !important;
+                    max-width: 75%;
+
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    section {
+        &.blueBg {
+            .bgImages {
+                .bgImg {
+                    transform: scale(1.2);
+                }
+
+                .overlay {
+                    top      : calc(100% - 360px);
+                    max-width: 75%;
+
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    section {
+        &.blueBg {
+            .bgImages {
+                .bgImg {
+                    transform: translateY(100px) scale(4) !important;
+                }
+
+                .overlay {
+                    top      : 0 !important;
+                    max-width: 100%;
+
+                    h2 {
+                        font-size: 23px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
         }
     }
 }

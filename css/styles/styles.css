@@ -28,6 +28,7 @@ header .inner {
   display: flex;
   justify-content: space-between;
   height: 100%;
+  padding: 0 8px;
 }
 header.active {
   background: #fff;
@@ -191,20 +192,36 @@ section .clients img {
 section.blueBg {
   position: relative;
 }
-section.blueBg * {
+section.blueBg .bgImages {
+  background: url(../../assets/images/altSectionBgOverlay.png) no-repeat;
+  background-size: 100% auto;
+  position: relative;
+  max-width: 1230px;
+  margin: 0 auto;
+}
+section.blueBg .bgImages * {
   color: #fff;
+}
+section.blueBg .bgImages img {
+  position: relative;
+  z-index: -1;
 }
 section.blueBg .overlay {
   position: absolute;
-  top: 0;
-  left: 90px;
+  top: calc(100% - 440px);
+  left: 0;
+  right: 0;
+  max-width: 60%;
+  margin: 0 auto;
 }
-section.blueBg .overlay img {
-  width: 50%;
+section.blueBg .overlay .subText {
+  background-image: none;
+  -webkit-text-fill-color: #fff;
+  font-weight: initial;
 }
-section.blueBg .overlay.hash {
-  width: 25%;
-  left: 90px;
+section.blueBg .overlay p {
+  line-height: 1.4;
+  font-size: 19px;
 }
 @media screen and (max-width: 320px) {
   #sidebar {
@@ -217,13 +234,50 @@ section.blueBg .overlay.hash {
     align-items: center;
     z-index: 1;
   }
+  header .inner {
+    padding: 0px;
+  }
   header #sideHam {
     display: flex !important;
   }
   header nav {
     display: none;
   }
-  section.blueBg {
-    background: url('../../assets/images/altSectionBg.svg') no-repeat;
+  section.blueBg .bgImages .bgImg {
+    transform: scale(1.7) !important;
+  }
+  section.blueBg .bgImages .overlay {
+    top: calc(100% - 325px) !important;
+    max-width: 75%;
+  }
+  section.blueBg .bgImages .overlay p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1140px) {
+  section.blueBg .bgImages .bgImg {
+    transform: scale(1.2);
+  }
+  section.blueBg .bgImages .overlay {
+    top: calc(100% - 360px);
+    max-width: 75%;
+  }
+  section.blueBg .bgImages .overlay p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 640px) {
+  section.blueBg .bgImages .bgImg {
+    transform: translateY(100px) scale(4) !important;
+  }
+  section.blueBg .bgImages .overlay {
+    top: 0 !important;
+    max-width: 100%;
+  }
+  section.blueBg .bgImages .overlay h2 {
+    font-size: 23px;
+  }
+  section.blueBg .bgImages .overlay p {
+    font-size: 16px;
   }
 }
