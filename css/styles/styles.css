@@ -267,7 +267,7 @@ section.formSection .form .rangeInput #steplist {
 }
 section.formSection .form button {
   margin: 2rem 0 0 0;
-  z-index: 1;
+  z-index: 0;
 }
 section.center {
   display: block;
